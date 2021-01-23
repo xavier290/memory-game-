@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="login-page">
+        <div class="form">
+            <form class="register-form" action="" method="GET">
+                <input class="user" type="text" placeholder="username" required>
+                <button id="btn" type="submit">Let's play</button>
+            </form>
+        </div>
+    </section>    
+    <section class="container">
+        <div class="memory-card" data-framework="food">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/food.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="food">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/food.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="gem">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/Gems_0.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="gem">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/Gems_0.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="gold">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/gold.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="gold">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/gold.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="stone">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/stone.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="stone">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/stone.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="trash">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/trash.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="trash">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/trash.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="gun">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/gun.png" alt="">
+        </div>
+        <div class="memory-card" data-framework="gun">
+            <img class="back" src="images/front-card.png" alt="">
+            <img class="front" src="images/gun.png" alt="">
+        </div>
+    </section>
+    <section class="results">
+        <h3><span id="userName"></span></h3>
+        <h3><span id="score">Score: 0 pts</span></h3>
+    </section>
+    <script src="js/app.js"></script>
+    <script src="js/addName.js"></script>
+</body>
+</html>
