@@ -14,10 +14,13 @@ const addName = (event) => {
 		allNames.pop;
 	}
 
-	let name = user.value;
+	let name = {
+		id: new Date(),
+		user_name: user.value
+	}
 	allNames.push(name);
 
-	userName.textContent = "Name: " + allNames[allNames.length - 1];
+	userName.textContent = "Name: " + name.user_name;
 
 	if (allNames.length > 0 && user.value != "") {
 		$(`.login-page`).style.width = "0%";
@@ -26,6 +29,8 @@ const addName = (event) => {
 	}
 
 	form.reset();
+
+	localStorage.setItem('namesList', JSON.stringify(allNames));
 };
 
 document.addEventListener("DOMContentLoaded", () => {

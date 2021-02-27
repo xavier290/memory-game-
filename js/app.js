@@ -6,6 +6,8 @@ let lockBoard = false;
 let firstCard, secondCard;
 let counter = 0;
 
+const reloadWindow = document.querySelector('.reload-window');
+
 function flipCard() {
 	if (lockBoard) return;
 	if (this === firstCard) return;
@@ -41,7 +43,7 @@ function disableCards() {
 
 		// every time the disableCards function is called the variable counter increase its value by 1
 		if (counter === 6) {
-			counter = 0;
+			resetGame();
 		}
 	}
 }
@@ -54,7 +56,7 @@ function unflipCards() {
 		secondCard.classList.remove("flip");
 
 		resetBoard();
-	}, 1500);
+	}, 1200);
 }
 
 function resetBoard() {
@@ -67,6 +69,18 @@ function shuffle() {
 		let randomPos = Math.floor(Math.random() * 12);
 		card.style.order = randomPos;
 	});
+}
+
+function resetGame () {
+	cards.forEach((card) => {
+		setTimeout(() => {
+			card.classList.remove('flip');
+		}, 500);
+
+		setTimeout(() => {
+			reloadWindow.classList.add('active');
+		}, 1500);
+	})
 }
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
